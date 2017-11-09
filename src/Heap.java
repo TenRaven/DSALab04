@@ -1,32 +1,43 @@
-public class Heap {
+public class Heap implements MyHeap{
   private Node root;
   private int numberOfNodes;
-
-  public static Node makeHeap(Node root){
-    return root;
+  @Override
+  public Node makeHeap(Comparable value) {
+    return null;
   }
 
-  public static boolean isEmpty(Heap heap){
+  @Override
+  public boolean isEmpty() {
     return false;
   }
 
-  public static boolean insert(Heap heap, Comparable value){
+  @Override
+  public boolean insert(Comparable value) {
     return false;
   }
 
-  public static boolean deleteMin(Heap heap){
+  @Override
+  public boolean deleteMin() {
     return false;
   }
 
-  public static boolean delete(Heap heap, Comparable value){
+  @Override
+  public boolean decreaseKey(Node key, Comparable updateValue) {
     return false;
   }
 
-  public static boolean union(Heap heap1, Heap heap2){
+  @Override
+  public boolean delete(Node del) {
     return false;
   }
 
-  public static Comparable findMin(Heap heap){
-    return heap.root.getValue();
+  @Override
+  public boolean union(MyHeap heap) {
+    return false;
+  }
+
+  @Override
+  public Comparable findMin() {
+    return null;
   }
 }

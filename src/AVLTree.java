@@ -1,31 +1,14 @@
 import java.util.ArrayList;
 
 public class AVLTree {
-  private AVLTree left, right, parent;
-  private Comparable data;
-  private int balance;
-  public AVLTree(Comparable data){
-    this.data = data;
-    this.balance = 0;
-  }
+  private Node root;
+
   public static boolean search(AVLTree tree, Comparable object){
     return false;
   }
 
   //make recursive by insterting at tree == null
   public static AVLTree insert(AVLTree tree, Comparable object){
-    if(tree == null){
-      tree = new AVLTree(object);
-    }else if(object.compareTo(tree.data) == -1){
-      insert(tree.left, object);
-      tree.left.parent = tree;
-      tree.balance--;
-    }else if(object.compareTo(tree.data) == 0 || object.compareTo(tree.data) == 1){
-      insert(tree.right, object);
-      tree.right.parent = tree;
-      tree.balance++;
-    }
-    checkBalance(tree);
     return tree;
   }
 
